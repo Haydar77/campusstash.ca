@@ -9,23 +9,32 @@
             font-family: Arial, sans-serif; 
             text-align: center; 
             padding: 60px 20px; 
-            background: #ffffff; 
+            /* This ensures the page background perfectly blends with your image */
+            background-color: #ffffff; 
             margin: 0;
         }
         .container {
             max-width: 600px;
             margin: 0 auto;
         }
+        .logo-wrapper {
+            display: inline-block;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
         .logo { 
             max-width: 100%; 
             height: auto; 
             width: 400px; 
-            margin-bottom: 30px;
+            display: block;
+            /* This trims away 3% from the left and right edges directly in the browser */
+            clip-path: inset(0% 3% 0% 3%);
         }
         h1 { 
             color: #1e293b; 
             font-size: 32px;
             margin-bottom: 10px;
+            margin-top: 20px;
         }
         p { 
             color: #64748b; 
@@ -36,8 +45,10 @@
 </head>
 <body>
     <div class="container">
-        <!-- The logo is now positioned back at the top -->
-        <img src="logo.jpg" alt="Campus Stash Logo" class="logo">
+        <!-- Logo container with safety mask -->
+        <div class="logo-wrapper">
+            <img src="logo.jpg" alt="Campus Stash Logo" class="logo">
+        </div>
         
         <h1>Our Website is Coming Soon</h1>
         <p>We are busy setting up the ultimate student storage experience. Please check back later!</p>
